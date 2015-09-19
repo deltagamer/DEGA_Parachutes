@@ -1,0 +1,13 @@
+Static Line Parachute v1.0.0.3 Supported Mods
+
+
+
+
+// Vanilla Vehicles //
+
+- None Currently
+
+// Modded Vehicles // 
+
+- Deltagamers ChinookPack Mod - "http://forums.bistudio.com/showthread.php?179060-ChinookPack-Mod-Release"
+- Chairbornes C130 Mod - "http://forums.bistudio.com/showthread.php?191700-Arma-2-C-130J-Port"

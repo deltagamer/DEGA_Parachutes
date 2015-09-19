@@ -1,0 +1,10 @@
+Static Line Parachute v1.0.0.3 Features
+
+
+
+
+The Ability to Static Line Jump from supported Aircraft
+All gear and Backpacks will be kept on jump and will return on touch down
+ACE3 and AGM Support
+Landed Chute model that can be packed
+Pilot ability to mass paradrop cargo players
