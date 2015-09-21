@@ -1,7 +1,7 @@
 
 class CfgPatches
 {
-	class DEGA_Static_Line
+	class DEGA_Parachutes
 	{
 		units[] = 
 		{
@@ -18,14 +18,14 @@ class CfgPatches
 			"A3_Anims_F",
 			"A3_Anims_F_Config_Sdr",
 			"A3_Air_F_Beta",
-			"CBA_XEH_A3"
+			"CBA_XEH_A3"			
 		};
 	};
 };
 class CfgCoreData
 {
-	cobraLight = "DEGA_Static_Line\data\Static_Parachute\cobraSvetlo.p3d";
-	marker = "DEGA_Static_Line\data\Static_Parachute\obrysove svetlo.p3d";
+	cobraLight = "DEGA_Parachutes\cobraSvetlo.p3d";
+	marker = "DEGA_Parachutes\obrysove svetlo.p3d";
 };
 class Extended_InitPost_EventHandlers
 {
@@ -33,7 +33,7 @@ class Extended_InitPost_EventHandlers
 	{
 		class DEGA_Static_Line_Init
 		{
-			init="[_this select 0] execVM ""DEGA_Static_Line\data\Static_Parachute\scripts\static_line_init.sqf"";";
+			init="[_this select 0] execVM ""DEGA_Parachutes\Scripts\static_line_init.sqf"";";
 		};
 	};
 };
@@ -53,7 +53,7 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		class KIA_Para_Pilot;
 		class chute_pos: Crew
 		{
-			file= "DEGA_Static_Line\data\anim\chute_pos";
+			file= "DEGA_Parachutes\data\anim\chute_pos";
 			interpolateTo[]={KIA_Para_Pilot,1};
 		};		
 	};

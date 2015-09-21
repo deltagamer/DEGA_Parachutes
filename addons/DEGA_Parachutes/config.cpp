@@ -60,9 +60,9 @@ class CfgVehicles
 		audible=0;
 		castDriverShadow=1;
 		driverAction="chute_pos";		
-		model="\DEGA_Static_Line\data\Static_Parachute\T10.p3d";
-		Icon="\DEGA_Static_Line\data\UI\icomap_Para_CA.paa";
-		picture = "\DEGA_Static_Line\data\UI\Para_CA.paa";
+		model="\DEGA_Parachutes\T10.p3d";
+		Icon="\DEGA_Parachutes\data\UI\icomap_Para_CA.paa";
+		picture = "\DEGA_Parachutes\data\UI\Para_CA.paa";
 		simulation="parachute";		
 /*	
 		soundEnviron[] = {"A3\sounds_f\dummysound",0.31622776,1,80};
@@ -107,7 +107,7 @@ class CfgVehicles
 	{
 		scope=1;
 		side=-1;
-		model="DEGA_Static_Line\data\Static_Parachute\backpack_holder.p3d";
+		model="DEGA_Parachutes\backpack_holder.p3d";
 		icon="";
 		displayName="";
 		nameSound="";
@@ -122,7 +122,7 @@ class CfgVehicles
 	{
 		scope=1;
 		side=-1;
-		model="DEGA_Static_Line\data\Static_Parachute\T10_Landed.p3d";
+		model="DEGA_Parachutes\T10_Landed.p3d";
 		icon="";
 		displayName="T10 Parachute";
 		nameSound="";
