@@ -46,6 +46,10 @@
 == v1.0.0.0 ==
 
 - Release
+- Reworked system
+- Now supports vanilla vehicles and hopefully every modded one
+- Removed Static Line References (previous mod)
+- Added Jump master
 
 
 [*]Known Issues[*]
