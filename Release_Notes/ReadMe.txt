@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////
-///////////////////DEGA Parachute v1.0.0.0//////////////////                              
+///////////////////DEGA Parachute v1.1.0.0//////////////////                              
 ////////////////////Addon by deltagamer/////////////////////                               
 // http://forums.bistudio.com/member.php?94697-deltagamer // 
 ////////////////////////////////////////////////////////////
@@ -14,13 +14,13 @@
 [*]ArmaHolic Link[*]
 
 
-- 
+- http://www.armaholic.com/page.php?id=29552
 
 
 [*]PlayWithSix Link[*]
 
 
-- 
+- https://withsix.com/p/Arma-3/mods/Efsg2hUXhke_r2sg7ak8BA/dega-parachutes/readme
 
 
 [*]Liscense - APL-SA[*]
@@ -40,8 +40,15 @@
 
 - Ohally - https://forums.bistudio.com/user/765002-ohally
 
+- ACE3 Guys - https://ace3mod.com/
+
 [*]Changelog[*]
 
+
+== v1.1.0.0 ==
+
+- Added the ability to enable/disable via Eden Editor
+- Reworked system to support other modded vehicles
 
 == v1.0.0.0 ==
 

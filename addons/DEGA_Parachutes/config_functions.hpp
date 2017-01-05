@@ -7,8 +7,7 @@ class CfgFunctions
 			file = "\DEGA_Parachutes\Functions";
 			class packParachute {};
 			class canDeployStaticLine {};
-			class deployStaticLine {};
-            class massParachuteDrop	{};		
+			class deployStaticLine {};	
 		};			
 	};	
 };

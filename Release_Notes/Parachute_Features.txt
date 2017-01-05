@@ -1,4 +1,4 @@
-DEGA Parachute v1.0.0.0 Features
+DEGA Parachute v1.1.0.0 Features
 
 
 
@@ -7,3 +7,4 @@ Ability to jump from any air vehicle
 No need for parachute bag
 Keep all gear and backpack when parachuting 
 Backpack is hung below player when jumping
+Enable/Disable via Eden Editor

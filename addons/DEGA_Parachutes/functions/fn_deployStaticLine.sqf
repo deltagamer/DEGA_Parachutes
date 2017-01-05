@@ -1,5 +1,5 @@
 /*
-Author: Deltagamer, Alexander (ImperialAlex), Lifetap
+Author: Community Upgrade Project
 
 Description:
 Ejects players out of aircraft and deploys t10 parachute, hanging the backpack below them via rope.
@@ -31,8 +31,13 @@ if (!isNull (unitBackpack _caller)) then {
 
 /* PREPARE FOR JUMP */
 _caller addBackPack "DEGA_T10_Parachute_backpack";
-_caller allowDamage false;  
-_caller action [ "eject", vehicle player];
+_caller allowDamage false;
+private _jumpPoints = getArray (configFile >> "CfgVehicles" >> typeOf _vehicle >> "DEGA_JumpPoint");
+if (_jumpPoints isEqualTypeAll "") then {
+  _jumpPoints = _jumpPoints apply {_vehicle selectionPosition _x}
+};  
+moveOut _caller;
+_caller setPosASL AGLToASL (_vehicle modelToWorld (selectRandom _jumpPoints));
 _caller setdir ((getDir _vehicle) - 180);
 
 
@@ -47,6 +52,7 @@ _caller setdir ((getDir _vehicle) - 180);
     _items = _this select 5;
     
     /* actual jump */
+    detach _caller;	
 
     /* wait 1 sec */
     sleep 1;   

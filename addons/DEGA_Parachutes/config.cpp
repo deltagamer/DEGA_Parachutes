@@ -4,8 +4,8 @@
 class CfgVehicles
 {
 	class B_Parachute;	
-	class parachuteBase;	
-	class DEGA_T10_Parachute: parachuteBase
+	class Steerable_Parachute_F;	
+	class DEGA_T10_Parachute: Steerable_Parachute_F
 	{
 		scope = 1;
 		scopeArsenal = 0;
@@ -29,12 +29,41 @@ class CfgVehicles
 					"veh_air_parachute_p"
 				};
 			};
-		};			
+		};		
+		
+		//Ohally Edit
+		distancelevel1=20;
+		distancelevel2=40;		
+		deltavaluehorizontal=0.011;
+		deltavaluevertical=0.001;
+		airinfluence=0.99000001;
+		duration=2;
+		liftgravity=-40;
+		liftthreshold=0.99000001;
+		maxgravity=-10;
+		maxliftduration=4;
+		maxliftthrust=-40;
+		maxrotationx=0.1;
+		maxrotationz=0.40000001;
+		maxsensitivityhorizontal=0.050000001;
+		maxsensitivityvertical=0.0099999998;
+		mingravity=-6;
+		minliftduration=4;
+		minliftthrust=-40;
+		minrotationx=-0.1;
+		minrotationz=-0.40000001;
+		normalgravity=-8;
+		thrustaccel=0.1;
+		thrustdeccel=0.1;
+		thrustnormal=0.1;
+		turnforcescale=4.9999999e-005;
+		unitinfotype="RscUnitInfoParachute";		
+		
 		textSingular="$STR_A3_nameSound_veh_air_parachute_s";
 		textPlural="$STR_A3_nameSound_veh_air_parachute_p";
 		nameSound="veh_air_parachute_s";
 		author="Deltagamer";
-		_generalMacro="NonSteerable_Parachute_F";
+		_generalMacro="T10_Parachute";
 		radarType = 0;
 		driverCanEject = 0;
 		openingTime=5;		
@@ -59,11 +88,12 @@ class CfgVehicles
 		getOutAction="GetOutPara";
 		audible=0;
 		castDriverShadow=1;
+		hideweaponsdriver=0;		
 		driverAction="chute_pos";		
 		model="\DEGA_Parachutes\T10.p3d";
 		Icon="\DEGA_Parachutes\data\UI\icomap_Para_CA.paa";
 		picture = "\DEGA_Parachutes\data\UI\Para_CA.paa";
-		simulation="parachute";		
+		//simulation="parachute";		
 /*	
 		soundEnviron[] = {"A3\sounds_f\dummysound",0.31622776,1,80};
 		soundGetIn[] = {"A3\sounds_f\dummysound",0.31622776,1,20};

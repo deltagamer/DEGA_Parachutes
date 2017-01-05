@@ -1,5 +1,5 @@
 /*
-	Author: Deltagamer, Alexander (ImperialAlex), Lifetap
+	Author: Community Upgrade Project
 
 	Description:
 	Checks if caller is player and in cargo position with ramp lowered or open. Whilst making sure vehicle is above defined height.
@@ -11,7 +11,7 @@ private ["_vehicle","_canDeploy","_heightAboveGround"];
 _vehicle = _this;
    
 _canDeploy = false;
-if ((_vehicle getCargoIndex player) >= 0 /*&& (unitBackpack Player isKindof "DEGA_T10_Parachute_backpack")*/) then {
+if ((_vehicle getCargoIndex player) >= 0 && (getNumber (configFile >> "CfgVehicles" >> (typeOf vehicle player) >> "DEGA_Jumping_enabled") == 1) && player getVariable ['DEGA_Jumping_Condition', false]) then {
    _heightAboveGround = (getPosATL _vehicle) select 2;
    if (_heightAboveGround > 140) then {
       _canDeploy = true;

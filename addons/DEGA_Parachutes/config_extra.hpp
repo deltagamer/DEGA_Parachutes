@@ -37,6 +37,69 @@ class Extended_InitPost_EventHandlers
 		};
 	};
 };
+
+// Include Eden Editor UI macros
+// For attributes, you'll be interested in these:
+// ATTRIBUTE_TITLE_W - title width
+// ATTRIBUTE_CONTENT_W - content width
+#include "\a3\3DEN\UI\macros.inc"
+ 
+// Inherit base classes
+class ctrlEdit;
+class ctrlMenuStrip;
+class display3DEN
+{
+	class Controls
+	{
+		class MenuStrip: ctrlMenuStrip
+		{
+			class Items
+			{
+				class Attributes
+				{
+					items[] += {"DEGA_StaticLine"};
+				};
+				class DEGA_StaticLine
+				{
+					text = "DEGA Static Line Attributes";
+					action = "edit3DENMissionAttributes 'DEGA_StaticLine_Section';";
+				};
+			};
+		};
+	};
+};
+
+class Cfg3DEN
+{
+	class Mission
+	{
+		class DEGA_StaticLine_Section // Custom section class, everything inside will be opened in one window
+		{
+			displayName = "DEGA Attributes"; // Text visible in the window title as "Edit <displayName>"
+			display = "Display3DENEditAttributesPreview"; // Optional - display for attributes window. Must have the same structure and IDCs as the default Display3DENEditAttributes
+			class AttributeCategories
+			{
+				// The following structure is the same as the one used for entity attributes
+				class DEGA_Category
+				{
+                    class Attributes
+                    {
+                        class Staticline_enable
+                        {
+                            displayName = "Allow Static Line";
+                            tooltip = "Allow Static Line Parachuting for all supported aircraft";
+                            property = "DEGA_Static_Line";
+                            control = "checkbox";
+                            expression = "if (_value) then {player setVariable ['DEGA_Jumping_Condition', true]};";
+                            defaultValue = "false";
+                        };
+                    };
+				};
+			};
+		};
+	};
+};
+
 class CfgMovesBasic
 {
 	class DefaultDie;
